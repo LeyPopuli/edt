@@ -58,6 +58,27 @@ footer p{margin:0}
 }
 @media (prefers-reduced-motion:reduce){ol.timeline::before{animation:none}}
 @media print{body{background:#fff}}
+  .prices{margin:1.1rem 0 .3rem;overflow-x:auto;border-radius:.75rem}
+.prices table{width:100%;min-width:32rem;border-collapse:separate;border-spacing:0;
+  background:var(--bg);border-radius:.75rem;overflow:hidden;font-variant-numeric:tabular-nums}
+.prices th,.prices td{padding:.6rem .9rem;text-align:center;border-bottom:1px solid rgba(244,241,234,.08)}
+.prices thead th{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.35rem;
+  letter-spacing:.03em;line-height:1;color:var(--cream);border-bottom:none}
+.prices thead th span{display:block;margin-top:.25rem;font-family:"Barlow",system-ui,sans-serif;
+  font-size:.75rem;letter-spacing:0;opacity:.8}
+.prices thead th:first-child{text-align:left;color:var(--muted)}
+.prices thead .corta{background:var(--slate)}
+.prices thead .media{background:var(--terra)}
+.prices thead .larga{background:var(--plum)}
+.prices tr.group th{text-align:left;font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;
+  font-size:1.15rem;letter-spacing:.05em;color:var(--cream);background:rgba(244,241,234,.07)}
+.prices tbody th[scope="row"]{text-align:left;font-weight:500;color:var(--ink);white-space:nowrap}
+.prices td{color:var(--cream);font-weight:600}
+.prices td.corta{background:rgba(108,127,134,.2)}
+.prices td.media{background:rgba(186,74,40,.2)}
+.prices td.larga{background:rgba(110,74,100,.45)}
+.prices tbody tr:last-child > *{border-bottom:none}
+@media (max-width:40rem){.prices th,.prices td{padding:.5rem .65rem;font-size:.9rem}}
 </style>
 </head>
 <body>
@@ -75,9 +96,29 @@ footer p{margin:0}
         <h2>¡Hola, entreterrícola!</h2>
         <p>Las jornadas, impulsadas por ambos clubes, Roach Room (Valencia) y Club Tercios (Zaragoza), tendrán lugar en Villarluengo (Teruel) en <a href="https://maps.app.goo.gl/9pz349DPtZQCp5Yz7" target="_blank">Hotel La Trucha</a> (repetimos el del año pasado) los días <b>4, 5, 6 y 7 de marzo</b>.</p>        
         <p>Los precios y opciones de alojamiento son las siguientes, todas incluyen pensión completa desde la comida del día de inicio hasta la comida del día de fin elegidos, siendo las opciones corta (1 noche del 6-7 de marzo), media (2 noches del 5-7 de marzo) y larga (3 noches del 4-7 de marzo):</p>
-        <p>- Habitación doble de uso individual estancia corta/media/larga -> 148/274/400€ por PERSONA</p>
-        <p>- Habitación doble estancia corta/media/larga -> 113/204/295€ por PERSONA</p>
-        <p>- Habitación triple estancia corta/media/larga -> 111/199/287€ por PERSONA</p>
+        <div class="prices">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Habitación</th>
+        <th scope="col" class="corta">Corta<span>1 noche · 6–7 mar</span></th>
+        <th scope="col" class="media">Media<span>2 noches · 5–7 mar</span></th>
+        <th scope="col" class="larga">Larga<span>3 noches · 4–7 mar</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="group"><th colspan="4">Precio por persona</th></tr>
+      <tr><th scope="row">Doble (uso individual)</th><td class="corta">148 €</td><td class="media">274 €</td><td class="larga">400 €</td></tr>
+      <tr><th scope="row">Doble (2 personas)</th><td class="corta">113 €</td><td class="media">204 €</td><td class="larga">295 €</td></tr>
+      <tr><th scope="row">Triple (3 personas)</th><td class="corta">111 €</td><td class="media">199 €</td><td class="larga">287 €</td></tr>
+
+      <tr class="group"><th colspan="4">Precio total por habitación</th></tr>
+      <tr><th scope="row">Doble (uso individual)</th><td class="corta">148 €</td><td class="media">274 €</td><td class="larga">400 €</td></tr>
+      <tr><th scope="row">Doble (2 personas)</th><td class="corta">226 €</td><td class="media">408 €</td><td class="larga">590 €</td></tr>
+      <tr><th scope="row">Triple (3 personas)</th><td class="corta">333 €</td><td class="media">597 €</td><td class="larga">861 €</td></tr>
+    </tbody>
+  </table>
+</div>
       </div>
     </li>
     <li class="step c2">
